@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            width: 106%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="process_form.php" method="post">
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" maxlength="100" required>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="20" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" maxlength="100" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" maxlength="200" required>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="5" maxlength="1000" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
